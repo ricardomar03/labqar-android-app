@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="levelRed">#FF0000</color>
+    <color name="levelOrange">#ffa500</color>
+    <color name="levelYellow">#FFFF00</color>
+    <color name="levelDarkGreen">#008000</color>
+    <color name="levelGreen">#02dd02</color>
+    <color name="levelGrey">#808080</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

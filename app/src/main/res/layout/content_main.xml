@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.Main"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/unavailable_textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Não há dados disponíveis para este utilizador"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/date_time_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/date_time_index_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="18sp" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/quality_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_time_cardView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/quality"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/pieChart_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/quality_textView"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <View
+                        android:id="@+id/empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true"></View>
+
+                    <LinearLayout
+                        android:id="@+id/barChart_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/empty_view"
+                        android:background="#EEEEEE"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/average_textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0"
+                            android:text="Classificação dos diferentes poluentes"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/barChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/index_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0"
+                            android:background="@color/colorAccent"
+                            android:padding="3dp"
+                            android:text="Variação nas últimas 24h"
+                            android:textColor="#FFFFFF" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--<com.hookedonplay.decoviewlib.DecoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dynamicArcView"
+            app:dv_arc_gravity_horizontal="Fill"
+            app:dv_arc_gravity_vertical="Top"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/quality_textView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="36dp"
+            android:id="@+id/polution_level_textView"/>-->
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

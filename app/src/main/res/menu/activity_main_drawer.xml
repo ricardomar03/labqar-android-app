@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_overview"
+            android:icon="@drawable/ic_clipboard_text"
+            android:title="@string/item1" />
+        <item
+            android:id="@+id/nav_measurements"
+            android:icon="@drawable/ic_compass"
+            android:title="@string/item2"/>
+        <item
+            android:id="@+id/nav_alerts"
+            android:icon="@drawable/ic_alert"
+            android:title="@string/item7"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_information"
+            android:title="@string/item3"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/item4"/>
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@drawable/ic_tutorial"
+            android:title="@string/item6"/>
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_power"
+            android:title="@string/item5"/>
+    </group>
+
+</menu>
